@@ -1,117 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#fff0f7">
-<title>Happy Birthday Iqqu! 🎂</title>
-<style>
-:root{--pink:#ff75ad;--deep:#a13e89;--lav:#c9b5ff;--mint:#b9f3dc;--cream:#fff8f1}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:#56314f;background:linear-gradient(135deg,#fff0f7,#f4efff 48%,#e9fff6);overflow-x:hidden}
-button{font:inherit;cursor:pointer}.music-pill{position:fixed;z-index:20;top:14px;right:14px;border:1px solid #ffffffb8;background:#ffffffd9;backdrop-filter:blur(10px);border-radius:999px;padding:10px 14px;color:#7a3972;box-shadow:0 6px 24px #9e5c9020}
-.hero{min-height:100svh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:84px 18px 55px;isolation:isolate;overflow:hidden}
-.glow{position:absolute;border-radius:50%;filter:blur(4px);z-index:-1;opacity:.65}.g1{width:260px;height:260px;background:#ffc8e2;top:8%;left:-80px}.g2{width:300px;height:300px;background:#c7f5e5;bottom:4%;right:-100px}
-.eyebrow{display:inline-block;background:#ffffffb8;border:1px solid #fff;padding:8px 15px;border-radius:99px;letter-spacing:2px;font-size:.76rem;color:#9c4c91;font-weight:800}
-h1{font-size:clamp(2.7rem,9vw,6.6rem);line-height:.98;letter-spacing:-.055em;margin:20px auto 14px;color:#a7438b;text-shadow:3px 4px 0 #ffffffb8}
-h1 span{display:block;color:#fa6da7}.hero p{font-size:clamp(1rem,2.8vw,1.2rem);max-width:560px;margin:0 auto 25px;line-height:1.7;color:#76566e}
-.photo-frame{width:min(76vw,300px);aspect-ratio:4/5;margin:25px auto 24px;padding:9px;background:#fff;border-radius:28px;box-shadow:0 18px 55px #9f4d8528;transform:rotate(-2deg);position:relative}
-.photo-frame img{width:100%;height:100%;object-fit:cover;border-radius:20px;display:block}.photo-frame:after{content:"🌸";position:absolute;right:-19px;top:-22px;font-size:42px;transform:rotate(15deg)}
-.primary{border:0;background:linear-gradient(135deg,#ff7db2,#c18dff);color:white;padding:14px 23px;border-radius:99px;font-weight:800;box-shadow:0 10px 24px #d37bb744;transition:.2s}.primary:hover{transform:translateY(-3px)}
-section{padding:75px 18px;text-align:center}.section-tag{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:#b05b9b;font-weight:900}.section-title{font-size:clamp(2rem,6vw,3.5rem);margin:9px 0 12px;color:#7e427d;letter-spacing:-.04em}.sub{max-width:620px;margin:0 auto 28px;line-height:1.7;color:#795e76}
-.balloon-area{max-width:1000px;margin:30px auto 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;align-items:center}
-.balloon{position:relative;border:0;background:transparent;min-height:150px;display:flex;align-items:center;justify-content:center;flex-direction:column;animation:float 3s ease-in-out infinite;animation-delay:var(--delay);transition:transform .2s;filter:drop-shadow(0 9px 8px #784c7520)}
-.balloon:hover{transform:scale(1.08)}.balloon-shape{height:100px;width:76px;border-radius:52% 48% 48% 52% / 43% 43% 57% 57%;background:var(--color);position:relative;display:grid;place-items:center;color:#fff;font-size:1.65rem;font-weight:900;text-shadow:0 2px 3px #0002}
-.balloon-shape:before{content:"";position:absolute;width:15px;height:28px;border-radius:50%;background:#ffffff55;left:14px;top:13px;transform:rotate(25deg)}.balloon-shape:after{content:"";position:absolute;bottom:-8px;left:31px;border-left:7px solid transparent;border-right:7px solid transparent;border-top:12px solid var(--color)}
-.string{height:28px;width:1px;background:#b68aa9;margin-top:6px}.tap-label{font-size:.76rem;font-weight:800;color:#8d6687;margin-top:3px}
-.message-card{display:none;max-width:650px;margin:28px auto 0;background:#ffffffd9;border:1px solid white;border-radius:26px;padding:25px 22px;box-shadow:0 15px 45px #9f4d851b;animation:pop .35s ease}.message-card.show{display:block}.message-card h3{font-size:1.5rem;margin:0 0 8px;color:#a7438b}.message-card p{line-height:1.8;margin:0}
-.love-grid{max-width:900px;margin:28px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.love-card{background:#ffffffb8;border:1px solid #fff;border-radius:22px;padding:23px 15px;box-shadow:0 9px 28px #9f4d8510}.love-card .emoji{font-size:2rem}.love-card h3{margin:10px 0 6px;color:#a34d8e}.love-card p{margin:0;line-height:1.6;font-size:.94rem;color:#785e76}
-.gallery{max-width:1000px;margin:28px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.gallery figure{margin:0;padding:8px;background:white;border-radius:20px;box-shadow:0 10px 28px #9f4d851a;transform:rotate(var(--rot))}.gallery img{width:100%;height:270px;object-fit:cover;border-radius:14px;display:block}.gallery figcaption{padding:10px 4px 5px;font-weight:800;color:#9e4e8b}
-.final{background:linear-gradient(135deg,#ffd6e8,#e7dcff,#d9fff0);border-radius:34px;max-width:900px;margin:15px auto;padding:45px 22px}.final .big{font-size:clamp(2.2rem,7vw,4.4rem);margin:10px 0;color:#a7438b;line-height:1.1}.final p{max-width:600px;margin:0 auto 20px;line-height:1.8}
-footer{text-align:center;padding:24px;color:#9c7293;font-size:.85rem}
-#balloons-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}.floaty{position:absolute;bottom:-140px;animation:rise linear forwards;filter:drop-shadow(0 6px 5px #0001);font-size:35px}
-.confetti{position:fixed;width:9px;height:13px;top:-20px;z-index:30;pointer-events:none;animation:confettiFall 2.7s linear forwards}
-@keyframes float{0%,100%{translate:0 0}50%{translate:0 -10px}}@keyframes rise{to{transform:translateY(-125vh) rotate(22deg);opacity:.2}}@keyframes pop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}@keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:.9}}
-@media(max-width:650px){.balloon-area{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.balloon{min-height:135px}.balloon-shape{width:64px;height:85px}.love-grid{grid-template-columns:1fr}.gallery{gap:8px}.gallery img{height:175px}.gallery figure{padding:5px}.gallery figcaption{font-size:.78rem}.hero{padding-top:90px}section{padding:58px 14px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;scroll-behavior:auto!important}}
-</style>
-</head>
-<body>
-<audio id="birthdayMusic" loop preload="auto"><source src="birthdaymusic4.mp3" type="audio/mp3"></audio>
-<button class="music-pill" id="musicButton" aria-label="Play birthday music">🎵 Tap to play music</button>
-<div id="balloons-layer"></div>
-<header class="hero" id="top">
-<div class="glow g1"></div><div class="glow g2"></div>
-<div>
-<div class="eyebrow">✨ A LITTLE SURPRISE JUST FOR YOU ✨</div>
-<h1>Happy Birthday <span>IQRA!</span> 🎂</h1>
-<p>Today is all about your smile, your happiness, and all the beautiful things you deserve. Ready for your little birthday surprise? 💗</p>
-<div class="photo-frame"><img src="photo143.jpg" alt="IQRA birthday portrait"></div>
-<button class="primary" onclick="startSurprise()">🎉 Open your birthday surprise</button>
-<p style="font-size:.82rem;margin-top:12px">Psst… tap the balloons below for special wishes 🎈</p>
-</div>
-</header>
-<section id="wishes">
-<div class="section-tag">Pop a balloon, unlock a wish</div>
-<h2 class="section-title">A sky full of wishes 🎈</h2>
-<p class="sub">Har balloon ke andar IQRA ke liye ek pyaara sa message hai. Tap karke dekho! 💕</p>
-<div class="balloon-area" id="balloonArea"></div>
-<div class="message-card" id="messageCard" aria-live="polite"><h3 id="messageTitle">A little wish for you 💖</h3><p id="messageText"></p></div>
-</section>
-<section style="background:#ffffff50">
-<div class="section-tag">You make life brighter</div><h2 class="section-title">Reasons we love you 🌷</h2>
-<p class="sub">A few little reminders of how special you are.</p>
-<div class="love-grid">
-<div class="love-card"><div class="emoji">😊</div><h3>Your smile</h3><p>Your smile makes even an ordinary day feel special.</p></div>
-<div class="love-card"><div class="emoji">🦋</div><h3>Your beautiful heart</h3><p>Stay kind, stay genuine, and keep being wonderfully you.</p></div>
-<div class="love-card"><div class="emoji">🌟</div><h3>Your bright future</h3><p>May every dream you carry find its way to you.</p></div>
-</div>
-</section>
-<section id="memories">
-<div class="section-tag">Little moments, lovely memories</div><h2 class="section-title">Your beautiful moments 📸</h2>
-<p class="sub">A tiny photo wall made with love, just for your special day.</p>
-<div class="gallery">
-<figure style="--rot:-2deg"><img src="photo143.jpg" alt="Birthday memory one"><figcaption>Pretty little moments 🌸</figcaption></figure>
-<figure style="--rot:1deg"><img src="photo2.jpg" alt="Birthday memory two"><figcaption>Smile a little brighter 💗</figcaption></figure>
-<figure style="--rot:-1deg"><img src="photo3.jpg" alt="Birthday memory three"><figcaption>Memories to keep ✨</figcaption></figure>
-</div>
-</section>
-<section>
-<div class="final">
-<div style="font-size:2.4rem">🎂 💐 🎁</div>
-<div class="section-tag">Made with lots of love</div>
-<h2 class="big">Happy Birthday,<br>IQRA! 💖</h2>
-<p>May your year be full of laughter, good health, sweet surprises, beautiful friendships, and dreams coming true. Keep shining, keep smiling, and never forget how loved you are! 🫶</p>
-<button class="primary" onclick="celebrate()">🎊 One more celebration!</button>
-</div>
-</section>
-<footer>Made with 💗 especially for IQRA · Birthday vibes only ✨</footer>
-<script>
-const wishes=[
-["You are loved 💗","IQRA, may you always be surrounded by people who care for you, support you, and make you feel special. You deserve so much happiness!"],
-["Dream big 🌟","May every dream in your heart turn into something beautiful. Keep believing in yourself—you can do amazing things!"],
-["Endless smiles 😊","Wishing you 365 days of smiles, laughter, silly moments, and memories that make you laugh even years later."],
-["Stay magical 🦋","Never lose your kind heart, your sparkle, or the little things that make you uniquely YOU."],
-["Good luck 🍀","May good opportunities find you, hard days make you stronger, and happy days come more often than you expect."],
-["Lots of love 💐","Sending you a big virtual hug and all the warm birthday wishes in the world. Today and always, keep shining!"],
-["Your best year yet 🎉","New age, new memories, new adventures! May this chapter be your happiest one so far."],
-["You deserve the best 🎁","May life surprise you with beautiful people, peaceful moments, and everything your heart has been wishing for."],
-["Be happy always 🌈","Even on ordinary days, may you find a reason to smile. Your happiness matters more than you know."],
-["Birthday queen 👑","Today is your day—laugh louder, eat more cake, take all the photos, and enjoy every second!"],
-["Big hugs 🧸","If a hug could be wrapped like a present, this whole website would be one giant hug for you!"],
-["Keep glowing ✨","May your confidence grow, your worries shrink, and your future glow brighter with every step."]
-];
-const colors=["#ff80b5","#b69aff","#72d9bd","#ffb36b","#86c8ff","#f58caa","#a9d88e","#d49bff","#ff91a4","#7dd6d0","#f3c66f","#b2a0ff"];
-const area=document.getElementById("balloonArea");
-wishes.forEach((w,i)=>{const b=document.createElement("button");b.className="balloon";b.style.setProperty("--delay",(i%5)*-.55+"s");b.setAttribute("aria-label","Open birthday wish "+(i+1));b.innerHTML=`<span class="balloon-shape" style="--color:${colors[i]}">♥</span><span class="string"></span><span class="tap-label">Tap me!</span>`;b.addEventListener("click",()=>{document.getElementById("messageTitle").textContent=w[0];document.getElementById("messageText").textContent=w[1];document.getElementById("messageCard").classList.remove("show");void document.getElementById("messageCard").offsetWidth;document.getElementById("messageCard").classList.add("show");b.querySelector(".balloon-shape").textContent="✨";b.querySelector(".tap-label").textContent="Wish opened!";b.style.opacity=".75";confetti(18);});area.appendChild(b)});
-const audio=document.getElementById("birthdayMusic"), musicButton=document.getElementById("musicButton");
-async function toggleMusic(){if(audio.paused){try{await audio.play();musicButton.textContent="🎵 Music is playing · Pause";}catch(e){musicButton.textContent="🎵 Tap again to play";}}else{audio.pause();musicButton.textContent="🎵 Tap to play music";}}
-musicButton.addEventListener("click",toggleMusic);
-function startSurprise(){confetti(90);document.getElementById("wishes").scrollIntoView({behavior:"smooth"});if(audio.paused)toggleMusic();}
-function celebrate(){confetti(120);for(let i=0;i<18;i++)spawnFloaty();if(audio.paused)toggleMusic();}
-function confetti(n){const palette=["#ff76ad","#b69aff","#72d9bd","#ffcb70","#8dcaff","#fff"];for(let i=0;i<n;i++){const el=document.createElement("i");el.className="confetti";el.style.left=Math.random()*100+"vw";el.style.background=palette[Math.floor(Math.random()*palette.length)];el.style.animationDelay=Math.random()*.8+"s";el.style.transform=`rotate(${Math.random()*360}deg)`;document.body.appendChild(el);setTimeout(()=>el.remove(),3800);}}
-function spawnFloaty(){const el=document.createElement("span");el.className="floaty";el.textContent=["🎈","💗","🎉","✨","🌸"][Math.floor(Math.random()*5)];el.style.left=Math.random()*100+"vw";el.style.animationDuration=(5+Math.random()*5)+"s";document.getElementById("balloons-layer").appendChild(el);setTimeout(()=>el.remove(),10500)}
-for(let i=0;i<15;i++)setTimeout(spawnFloaty,i*350);
-setTimeout(()=>{try{audio.play().then(()=>musicButton.textContent="🎵 Music is playing · Pause").catch(()=>musicButton.textContent="🎵 Tap to play music");}catch(e){}},500);
-</script>
-</body>
-</html>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="theme-color" content="#fff0f7"> <title>Happy Birthday Iqqu! 🎂</title> <style> :root{--pink:#ff75ad;--deep:#a13e89;--lav:#c9b5ff;--mint:#b9f3dc;--cream:#fff8f1} *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:#56314f;background:linear-gradient(135deg,#fff0f7,#f4efff 48%,#e9fff6);overflow-x:hidden} button{font:inherit;cursor:pointer}.music-pill{position:fixed;z-index:20;top:14px;right:14px;border:1px solid #ffffffb8;background:#ffffffd9;backdrop-filter:blur(10px);border-radius:999px;padding:10px 14px;color:#7a3972;box-shadow:0 6px 24px #9e5c9020} .hero{min-height:100svh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:84px 18px 55px;isolation:isolate;overflow:hidden} .glow{position:absolute;border-radius:50%;filter:blur(4px);z-index:-1;opacity:.65}.g1{width:260px;height:260px;background:#ffc8e2;top:8%;left:-80px}.g2{width:300px;height:300px;background:#c7f5e5;bottom:4%;right:-100px} .eyebrow{display:inline-block;background:#ffffffb8;border:1px solid #fff;padding:8px 15px;border-radius:99px;letter-spacing:2px;font-size:.76rem;color:#9c4c91;font-weight:800} h1{font-size:clamp(2.7rem,9vw,6.6rem);line-height:.98;letter-spacing:-.055em;margin:20px auto 14px;color:#a7438b;text-shadow:3px 4px 0 #ffffffb8} h1 span{display:block;color:#fa6da7}.hero p{font-size:clamp(1rem,2.8vw,1.2rem);max-width:560px;margin:0 auto 25px;line-height:1.7;color:#76566e} 
+
+/* Photo frame and Zipper styles */
+.photo-frame{width:min(76vw,300px);aspect-ratio:4/5;margin:25px auto 24px;padding:9px;background:#fff;border-radius:28px;box-shadow:0 18px 55px #9f4d8528;transform:rotate(-2deg);position:relative; overflow: hidden;} 
+.photo-frame img{width:100%;height:100%;object-fit:cover;border-radius:20px;display:block}
+.photo-frame:after{content:"🌸";position:absolute;right:-19px;top:-22px;font-size:42px;transform:rotate(15deg)}
+
+.zipper-cover {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, #a7438b, #ff75ad);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 10;
+  transition: clip-path 0.1s ease-out;
+  cursor: pointer;
+  text-align: center;
+  padding: 15px;
+}
+.zipper-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: repeating-linear-gradient(to bottom, #fff, #fff 10px, #e290c5 10px, #e290c5 20px);
+  z-index: 11;
+}
+.zipper-head {
+  position: absolute;
+  width: 32px;
+  height: 45px;
+  background: #ffd700;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  z-index: 12;
+  transition: top 0.1s ease-out;
+}
+
+.primary{border:0;background:linear-gradient(135deg,#ff7db2,#c18dff);color:white;padding:14px 23px;border-radius:99px;font-weight:800;box-shadow:0 10px 24px #d37bb744;transition:.2s}.primary:hover{transform:translateY(-3px)} section{padding:75px 18px;text-align:center}.section-tag{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:#b05b9b;font-weight:900}.section-title{font-size:clamp(2rem,6vw,3.5rem);margin:9px 0 12px;color:#7e427d;letter-spacing:-.04em}.sub{max-width:620px;margin:0 auto 28px;line-height:1.7;color:#795e76} 
+.balloon-area{max-width:1000px;margin:30px auto 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;align-items:center} 
+.balloon{position:relative;border:0;background:transparent;min-height:150px;display:flex;align-items:center;justify-content:center;flex-direction:column;animation:float 3s ease-in-out infinite;animation-delay:var(--delay);transition:transform .2s;filter:drop-shadow(0 9px 8px #784c7520)} 
+.balloon:hover{transform:scale(1.08)}.balloon-shape{height:100px;width:76px;border-radius:52% 48% 48% 52% / 43% 43% 57% 57%;background:var(--color);position:relative;display:grid;place-items:center;color:#fff;font-size:1.65rem;font-weight:900;text-shadow:0 2px 3px #0002} 
+.balloon-shape:before{content:"";position:absolute;width:15px;height:28px;border-radius:50%;background:#ffffff55;left:14px;top:13px;transform:rotate(25deg)}.balloon-shape:after{content:"";position:absolute;bottom:-8px;left:31px;border-left:7px solid transparent;border-right:7px solid transparent;border-top:12px solid var(--color)} 
+.string{height:28px;width:1px;background:#b68aa9;margin-top:6px}.tap-label{font-size:.76rem;font-weight:800;color:#8d6687;margin-top:3px} 
+.message-card{display:none;max-width:650px;margin:28px auto 0;background:#ffffffd9;border:1px solid white;border-radius:26px;padding:25px 22px;box-shadow:0 15px 45px #9f4d851b;animation:pop .35s ease}.message-card.show{display:block}.message-card h3{font-size:1.5rem;margin:0 0 8px;color:#a7438b}.message-card p{line-height:1.8;margin:0} 
+.love-grid{max-width:900px;margin:28px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.love-card{background:#ffffffb8;border:1px solid #fff;border-radius:22px;padding:23px 15px;box-shadow:0 9px 28px #9f4d8510}.love-card .emoji{font-size:2rem}.love-card h3{margin:10px 0 6px;color:#a34d8e}.love-card p{margin:0;line-height:1.6;font-size:.94rem;color:#785e76} 
+.gallery{max-width:1000px;margin:28px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.gallery figure{margin:0;padding:8px;background:white;border-radius:20px;box-shadow:0 10px 28px #9f4d851a;transform:rotate(var(--rot))}.gallery img{width:100%;height:270px;object-fit:cover;border-radius:14px;display:block}.gallery figcaption{padding:10px 4px 5px;font-weight:800;color:#9e4e8b} 
+.final{background:linear-gradient(135deg,#ffd6e8,#e7dcff,#d9fff0);border-radius:34px;max-width:900px;margin:15px auto;padding:45px 22px}.final .big{font-size:clamp(2.2rem,7vw,4.4rem);margin:10px 0;color:#a7438b;line-height:1.1}.final p{max-width:600px;margin:0 auto 20px;line-height:1.8} 
+footer{text-align:center;padding:24px;color:#9c7293;font-size:.85rem} 
+#balloons-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}.floaty{position:absolute;bottom:-140px;animation:rise linear forwards;filter:drop-shadow(0 6px 5px #0001);font-size:35px} 
+.confetti{position:fixed;width:9px;height:13px;top:-20px;z-index:30;pointer-events:none;animation:confettiFall 2.7s linear forwards} 
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -10px}}@keyframes rise{to{transform:translateY(-125vh) rotate(22deg);opacity:.2}}@keyframes pop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}@keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:.9}} 
+@media(max-width:650px){.balloon-area{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.balloon{min-height:135px}.balloon-shape{width:64px;height:85px}.love-grid{grid-template-columns:1fr}.gallery{gap:8px}.gallery img{height:175px}.gallery figure{padding:5px}.gallery figcaption{font-size:.78rem}.hero{padding-top:90px}section{padding:58px 14px}} 
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;scroll-behavior:auto!important}} 
+</style> 
+</head> 
+<body> 
+<audio id="birthdayMusic" loop preload="auto"><source src="birthdaymusic4.mp3" type="audio/mp3"></audio> 
+<button class="music-pill" id="musicButton" aria-label="Play birthday music">🎵 Tap to play music</button> 
+<div id="balloons-layer"></div> 
+<header class="hero" id="top"> 
+  <div class="glow g1"></div><div class="glow g2"></div> 
+  <div> 
+    <div class="eyebrow">✨ A LITTLE SURPRISE JUST FOR YOU ✨</div> 
+    <h1>Happy Birthday <span>IQRA!</span> 🎂</h1> 
+    <p>Today is all about your smile, your happiness, and all the beautiful things you deserve. Scroll down to unzip your surprise! 💗</p> 
+    
+    <div class="photo-frame" id="photoFrame">
+      <img src="photo143.jpg" alt="IQRA birthday portrait">
+      <div class="zipper-cover" id="zipperCover">
+        <h3>⬇️ Scroll Down to Unzip!</h3>
+        <p style="font-size: 0.8rem; margin-top: 5px;">Neeche scroll karo photo dekhne ke liye</p>
+      </div>
+      <div class="zipper-line" id="zipperLine"></div>
+      <div class="zipper-head" id="zipperHead">▼</div>
+    </div> 
+
+    <button class="primary" onclick="startSurprise()">🎉 Open your birthday surprise</button> 
+    <p style="font-size:.82rem;margin-top:12px">Psst… tap the balloons below for special wishes 🎈</p> 
+  </div> 
+</header> 
+
+<section id="wishes"> 
+  <div class="section-tag">Pop a balloon, unlock a wish</div> 
+  <h2 class="section-title">A sky full of wishes 🎈</h2> 
+  <p class="sub">Har balloon ke andar IQRA ke liye ek pyaara sa message hai. Tap karke dekho! 💕</p> 
+  <div class="balloon-area" id="balloonArea"></div> 
+  <div class="message-card" id="messageCard" aria-live="polite"><h3 id="messageTitle">A little wish for you 💖</h3><p id="messageText"></p></div> 
+</section> 
+
+<section style="background:#ffffff50"> 
+  <div class="section-tag">You make life brighter</div><h2 class="section-title">Reasons we love you 🌷</h2> 
+  <p class="sub">A few little reminders of how special you are.</p> 
+  <div class="love-grid"> 
+    <div class="love-card"><div class="emoji">😊</div><h3>Your smile</h3><p>Your smile makes even an ordinary day feel special.</p></div> 
+    <div class="love-card"><div class="emoji">🦋</div><h3>Your beautiful heart</h3><p>Stay kind, stay genuine, and keep being wonderfully you.</p></div> 
+    <div class="love-card"><div class="emoji">🌟</div><h3>Your bright future</h3><p>May every dream you carry find its way to you.</p></div> 
+  </div> 
+</section> 
+
+<section id="memories"> 
+  <div class="section-tag">Little moments, lovely memories</div><h2 class="section-title">Your beautiful moments 📸</h2> 
+  
