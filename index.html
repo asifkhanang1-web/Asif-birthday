@@ -113,11 +113,9 @@ function spawnFloaty(){const el=document.createElement("span");el.className="flo
 for(let i=0;i<15;i++)setTimeout(spawnFloaty,i*350);
 setTimeout(()=>{try{audio.play().then(()=>musicButton.textContent="🎵 Music is playing · Pause").catch(()=>musicButton.textContent="🎵 Tap to play music");}catch(e){}},500);
 </script>
-  <script>
 const wishes=[ ["You are loved 💗","IQRA, may you always be surrounded by people who care for you, support you, and make you feel special. You deserve so much happiness!"], ["Dream big 🌟","May every dream in your heart turn into something beautiful. Keep believing in yourself—you can do amazing things!"], ["Endless smiles 😊","Wishing you 365 days of smiles, laughter, silly moments, and memories that make you laugh even years later."], ["Stay magical 🦋","Never lose your kind heart, your sparkle, or the little things that make you uniquely YOU."], ["Good luck 🍀","May good opportunities find you, hard days make you stronger, and happy days come more often than you expect."], ["Lots of love 💐","Sending you a big virtual hug and all the warm birthday wishes in the world. Today and always, keep shining!"], ["Your best year yet 🎉","New age, new memories, new adventures! May this chapter be your happiest one so far."], ["You deserve the best 🎁","May life surprise you with beautiful people, peaceful moments, and everything your heart has been wishing for."], ["Be happy always 🌈","Even on ordinary days, may you find a reason to smile. Your happiness matters more than you know."], ["Birthday queen 👑","Today is your day—laugh louder, eat more cake, take all the photos, and enjoy every second!"], ["Big hugs 🧸","If a hug could be wrapped like a present, this whole website would be one giant hug for you!"], ["Keep glowing ✨","May your confidence grow, your worries shrink, and your future glow brighter with every step."] ]; 
 const colors=["#ff80b5","#b69aff","#72d9bd","#ffb36b","#86c8ff","#f58caa","#a9d88e","#d49bff","#ff91a4","#7dd6d0","#f3c66f","#b2a0ff"]; 
 const area=document.getElementById("balloonArea"); 
-
 wishes.forEach((w,i)=>{
     const b=document.createElement("button");
     b.className="balloon";
@@ -200,7 +198,7 @@ document.addEventListener('click', function() {
     if (audio.paused) {
         toggleMusic();
     }
-}, { once: true });
+}, { once: true })
 
   </window.addEventListener('pointerdown', ...)>
   
