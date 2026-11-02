@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#fff0f7">
-<title>Happy Birthday Iqqu! 🎂</title>
+<title>Happy Birthday Iqra! 🎂</title>
 <style>
 :root{--pink:#ff75ad;--deep:#a13e89;--lav:#c9b5ff;--mint:#b9f3dc;--cream:#fff8f1}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:#56314f;background:linear-gradient(135deg,#fff0f7,#f4efff 48%,#e9fff6);overflow-x:hidden}
@@ -85,6 +85,33 @@ footer{text-align:center;padding:24px;color:#9c7293;font-size:.85rem}
 </div>
 </section>
 <footer>Made with 💗 especially for IQRA · Birthday vibes only ✨</footer>
+<script>
+const wishes=[
+["You are loved 💗","IQRA, may you always be surrounded by people who care for you, support you, and make you feel special. You deserve so much happiness!"],
+["Dream big 🌟","May every dream in your heart turn into something beautiful. Keep believing in yourself—you can do amazing things!"],
+["Endless smiles 😊","Wishing you 365 days of smiles, laughter, silly moments, and memories that make you laugh even years later."],
+["Stay magical 🦋","Never lose your kind heart, your sparkle, or the little things that make you uniquely YOU."],
+["Good luck 🍀","May good opportunities find you, hard days make you stronger, and happy days come more often than you expect."],
+["Lots of love 💐","Sending you a big virtual hug and all the warm birthday wishes in the world. Today and always, keep shining!"],
+["Your best year yet 🎉","New age, new memories, new adventures! May this chapter be your happiest one so far."],
+["You deserve the best 🎁","May life surprise you with beautiful people, peaceful moments, and everything your heart has been wishing for."],
+["Be happy always 🌈","Even on ordinary days, may you find a reason to smile. Your happiness matters more than you know."],
+["Birthday queen 👑","Today is your day—laugh louder, eat more cake, take all the photos, and enjoy every second!"],
+["Big hugs 🧸","If a hug could be wrapped like a present, this whole website would be one giant hug for you!"],
+["Keep glowing ✨","May your confidence grow, your worries shrink, and your future glow brighter with every step."]
+];
+const colors=["#ff80b5","#b69aff","#72d9bd","#ffb36b","#86c8ff","#f58caa","#a9d88e","#d49bff","#ff91a4","#7dd6d0","#f3c66f","#b2a0ff"];
+const area=document.getElementById("balloonArea");
+wishes.forEach((w,i)=>{const b=document.createElement("button");b.className="balloon";b.style.setProperty("--delay",(i%5)*-.55+"s");b.setAttribute("aria-label","Open birthday wish "+(i+1));b.innerHTML=`<span class="balloon-shape" style="--color:${colors[i]}">♥</span><span class="string"></span><span class="tap-label">Tap me!</span>`;b.addEventListener("click",()=>{document.getElementById("messageTitle").textContent=w[0];document.getElementById("messageText").textContent=w[1];document.getElementById("messageCard").classList.remove("show");void document.getElementById("messageCard").offsetWidth;document.getElementById("messageCard").classList.add("show");b.querySelector(".balloon-shape").textContent="✨";b.querySelector(".tap-label").textContent="Wish opened!";b.style.opacity=".75";confetti(18);});area.appendChild(b)});
+const audio=document.getElementById("birthdayMusic"), musicButton=document.getElementById("musicButton");
+async function toggleMusic(){if(audio.paused){try{await audio.play();musicButton.textContent="🎵 Music is playing · Pause";}catch(e){musicButton.textContent="🎵 Tap again to play";}}else{audio.pause();musicButton.textContent="🎵 Tap to play music";}}
+musicButton.addEventListener("click",toggleMusic);
+function startSurprise(){confetti(90);document.getElementById("wishes").scrollIntoView({behavior:"smooth"});if(audio.paused)toggleMusic();}
+function celebrate(){confetti(120);for(let i=0;i<18;i++)spawnFloaty();if(audio.paused)toggleMusic();}
+function confetti(n){const palette=["#ff76ad","#b69aff","#72d9bd","#ffcb70","#8dcaff","#fff"];for(let i=0;i<n;i++){const el=document.createElement("i");el.className="confetti";el.style.left=Math.random()*100+"vw";el.style.background=palette[Math.floor(Math.random()*palette.length)];el.style.animationDelay=Math.random()*.8+"s";el.style.transform=`rotate(${Math.random()*360}deg)`;document.body.appendChild(el);setTimeout(()=>el.remove(),3800);}}
+function spawnFloaty(){const el=document.createElement("span");el.className="floaty";el.textContent=["🎈","💗","🎉","✨","🌸"][Math.floor(Math.random()*5)];el.style.left=Math.random()*100+"vw";el.style.animationDuration=(5+Math.random()*5)+"s";document.getElementById("balloons-layer").appendChild(el);setTimeout(()=>el.remove(),10500)}
+for(let i=0;i<15;i++)setTimeout(spawnFloaty,i*350);
+setTimeout(()=>{try{audio.play().then(()=>musicButton.textContent="🎵 Music is playing · Pause").catch(()=>musicButton.textContent="🎵 Tap to play music");}catch(e){}},500);
 </script>
 </body>
 </html>
